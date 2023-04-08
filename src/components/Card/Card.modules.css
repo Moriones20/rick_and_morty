@@ -1,0 +1,41 @@
+.card {
+  position: relative;
+  background-color: rgba(0, 48, 71, 0.6);
+  margin: 10px;
+  text-align: center;
+  padding: 15px;
+  border: 3px solid black;
+  border-radius: 10px;
+  color: whitesmoke;
+  line-height: 0.8;
+}
+
+.card img {
+  width: 230px;
+  border-radius: 10px;
+}
+
+.name {
+  color: #04abff;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.name:hover{
+  scale: 1.1;
+}
+
+.name:active{
+  transform: scale(0.9);
+}
+
+.close {
+  background-color: rgba(255, 0, 0, 0.5);
+  position: absolute;
+  top: 25px;
+  right: 1px;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  padding: 3px 8px;
+}

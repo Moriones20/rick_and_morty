@@ -1,0 +1,10 @@
+.agregar {
+  background-color: #003047;
+  margin-left: 5px;
+}
+
+.search {
+  width: 50vh;
+  padding: 5px;
+  border-radius: 10px;
+}

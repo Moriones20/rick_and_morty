@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom"
+import "./Card.modules.css"
 
 export default function Card({id, name, status, species, gender, origin, image, onClose}) {
    return (
-      <div>
-         <button onClick={() => onClose(id)}>X</button>
+      <div className="card">
+         <button className="close" onClick={() => onClose(id)}>X</button>
 
          <NavLink to={`/detail/${id}`}>
-            <h2>{name}</h2>
+            <h2 className="name">{name}</h2>
          </NavLink>
 
          <h3>{status}</h3>

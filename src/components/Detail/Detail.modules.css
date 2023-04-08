@@ -1,0 +1,26 @@
+.container-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  margin: 5% 0;
+}
+
+.text-detail {
+  background-color: rgba(0, 48, 71, 0.7);
+  padding: 50px;
+  margin: 0 6%;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.img-detail {
+  margin: 0 6%;
+}
+
+.img-detail img{
+  width: 300px;
+  height: 300px;
+  border: 3px solid black;
+  border-radius: 150px;
+}

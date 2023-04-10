@@ -1,10 +1,47 @@
-.agregar {
-  background-color: #003047;
-  margin-left: 5px;
+.container-searchbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
 }
 
 .search {
-  width: 50vh;
-  padding: 5px;
-  border-radius: 10px;
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 4px 0;
+  outline: none;
+}
+
+.btn-agregar,
+.btn-random {
+  background-color: #5f0294;
+  color: ghostwhite;
+  height: auto;
+  width: auto;
+  margin: 8px 0;
+  padding: 5px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.1s;
+}
+
+.btn-random {
+  margin-left: 10px;
+}
+
+.btn-agregar:hover, .btn-random:hover {
+  transform: translateY(-2px);
+  background-color: rgb(20, 172, 0);
+  color: #370057;
 }

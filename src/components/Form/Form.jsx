@@ -31,37 +31,46 @@ const Form = ({ login }) => {
 
   return (
     <div className="container-form">
-      <img className="image-login" src="/login.png" alt="Rick_and_Morty" />
-      <br />
-      <br />
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email: </label>
-        <input
-          type="text"
-          name="email"
-          value={userData.email}
-          className={errors.email && "warning"}
-          onChange={handleChange}
-        />
-        <br />
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="top-form">
+          <h1 className="title">Sign in</h1>
+          <img src="./login.png" alt="rick_and_morty" />
+        </div>
+        <div className="inputContainer">
+          <input
+            type="text"
+            name="email"
+            value={userData.email}
+            className={errors.email ? "warning" : "input"}
+            onChange={handleChange}
+            placeholder=""
+          />
+          <label htmlFor="email" className="label">
+            Email
+          </label>
+        </div>
         {errors.email && <p className="danger">{errors.email}</p>}
-
+        <br />
         <br />
 
-        <label htmlFor="password">Password: </label>
-        <input
-          type="password"
-          name="password"
-          value={userData.password}
-          className={errors.password && "warning"}
-          onChange={handleChange}
-        />
-        <br />
+        <div className="inputContainer">
+          <input
+            type="password"
+            name="password"
+            value={userData.password}
+            className={errors.password ? "warning" : "input"}
+            onChange={handleChange}
+            placeholder=""
+          />
+          <label htmlFor="password" className="label">
+            Password
+          </label>
+        </div>
         {errors.password && <p className="danger">{errors.password}</p>}
 
-        <br />
-
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

@@ -1,24 +1,102 @@
 .container-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  background-color: rgba(0, 48, 71, 0.7);
-  padding: 30px;
-  margin: 30px 0;
-  border: 1px solid black;
-  border-radius: 10px;
-  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: ghostwhite;
 }
 
-.image-login {
+.top-form {
+  display: flex;
+}
+
+.form {
+  background-color: #11001c;
+  width: 400px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px #000000be;
+  text-align: left;
+}
+
+.title {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.form img {
+  display: block;
   width: auto;
-  height: 300px;
+  height: 100px;
+  margin-left: auto;
+}
+
+.inputContainer {
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+}
+
+.input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
 }
 
 .warning {
-  border: solid, red, 1px;
-  border-radius: 0.2em;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border: 3px solid #9c0202;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  z-index: 1;
+}
+
+::placeholder {
+  color: transparent;
+}
+
+.label {
+  position: absolute;
+  top: -30px;
+  padding: 5px 5px;
+  background-color: #11001c;
+  color: #8865a1;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit {
+  display: block;
+  margin-left: auto;
+  padding: 15px 30px;
+  border: none;
+  background-color: #3a015c;
+  color: ghostwhite;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px;
+  transition: 0.1s;
+}
+
+.submit:hover {
+  transform: translateY(-2px);
+  background-color: rgb(20, 172, 0);
+  color: #370057;
 }
 
 .danger {

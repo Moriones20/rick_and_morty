@@ -1,13 +1,23 @@
 .card {
   position: relative;
-  background-color: rgba(0, 48, 71, 0.6);
+  background-color: #140020;
   margin: 10px;
   text-align: center;
   padding: 15px;
-  border: 3px solid black;
-  border-radius: 10px;
-  color: whitesmoke;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px #000000be;
   line-height: 0.8;
+  transition: 0.5s;
+}
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color: ghostwhite;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  background-color: rgb(20, 172, 0);
 }
 
 .card img {
@@ -15,27 +25,15 @@
   border-radius: 10px;
 }
 
-.name {
-  color: #04abff;
-  text-decoration: underline;
-  cursor: pointer;
-  transition: all 0.1s ease;
-}
-
-.name:hover{
-  scale: 1.1;
-}
-
-.name:active{
-  transform: scale(0.9);
-}
-
 .close {
-  background-color: rgba(255, 0, 0, 0.5);
-  position: absolute;
-  top: 25px;
-  right: 1px;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
+  background-color: #5f0294;
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  font-size: 12px;
   padding: 3px 8px;
+  border: 0;
+  border-radius: 4px;
+  color: ghostwhite;
+  box-shadow: 0 1px 5px #000000be;
 }

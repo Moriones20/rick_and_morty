@@ -4,20 +4,5 @@
 }
 
 button {
-  background-color: transparent;
-  border: 0;
-  color: white;
-  padding: 5px 10px;
-  font-size: 16px;
   cursor: pointer;
-  transition: all 0.1s ease;
-  border-radius: 3px;
-}
-
-button:hover {
-  scale: 1.2;
-}
-
-button:active {
-  transform: scale(0.9);
 }

@@ -1,22 +1,27 @@
-import SearchBar from "../SearchBar/SearchBar";
-import { NavLink } from "react-router-dom";
-import "./Nav.modules.css"
+import { NavLink, useLocation } from "react-router-dom";
+import "./Nav.modules.css";
 
-const Nav = ({ onSearch, logout }) => {
+const Nav = ({ logout }) => {
+  const location = useLocation();
+
   return (
     <nav>
-      <NavLink to={"/home"}>
-        <button className="navButton">Home</button>
-      </NavLink>
-      
-      <NavLink to={"/about"}>
-        <button className="navButton">About</button>
-      </NavLink>
+      {location.pathname !== "/home" && (
+        <NavLink to={"/home"}>
+          <button className="navButton">Home</button>
+        </NavLink>
+      )}
 
-      <SearchBar onSearch={onSearch} />
+      {location.pathname !== "/about" && (
+        <NavLink to={"/about"}>
+          <button className="navButton">About</button>
+        </NavLink>
+      )}
 
       <NavLink to={"/"}>
-        <button logout={logout} className="navButton">Logout</button>
+        <button logout={logout} className="navButton">
+          Logout
+        </button>
       </NavLink>
     </nav>
   );

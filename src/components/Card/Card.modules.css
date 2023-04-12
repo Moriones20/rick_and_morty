@@ -7,7 +7,7 @@
   border-radius: 8px;
   box-shadow: 0 10px 20px #000000be;
   line-height: 0.8;
-  transition: 0.5s;
+  transition: all 0.25s ease;
 }
 
 a:link, a:visited, a:active {
@@ -57,12 +57,12 @@ a:link, a:visited, a:active {
 }
 
 .close:hover, .favorite:hover {
-  transition: 0.2s;
+  transition: all 0.1s ease;
   transform: translateY(-2px);
 }
 
 .favorite:active {
-  transition: 0.05s;
+  transition: all 0.1s ease;
   font-size: 16px;
   padding: 0 3px;
 }

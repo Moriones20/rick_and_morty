@@ -11,7 +11,7 @@
 }
 
 .form {
-  background-color: #11001c;
+  background-color: #190029;
   width: 400px;
   border-radius: 8px;
   padding: 20px 40px;
@@ -73,8 +73,8 @@
   position: absolute;
   top: -30px;
   padding: 5px 5px;
-  background-color: #11001c;
-  color: #8865a1;
+  background-color: transparent;
+  color: #a771ce;
   border-radius: 5px;
   font-size: 16px;
 }
@@ -84,7 +84,7 @@
   margin-left: auto;
   padding: 15px 30px;
   border: none;
-  background-color: #3a015c;
+  background-color: #490174;
   color: ghostwhite;
   border-radius: 6px;
   font-size: 16px;
@@ -96,7 +96,7 @@
 .submit:hover {
   transform: translateY(-2px);
   background-color: rgb(20, 172, 0);
-  color: #370057;
+  color: #190029;
 }
 
 .danger {

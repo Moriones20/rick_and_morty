@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  background-color: #140020;
+  background-color: #190029;
   margin: 10px;
   text-align: center;
   padding: 15px;
@@ -25,15 +25,44 @@ a:link, a:visited, a:active {
   border-radius: 10px;
 }
 
+.btn-fav-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .close {
   background-color: #5f0294;
   display: block;
   margin-top: auto;
   margin-left: auto;
   font-size: 12px;
-  padding: 3px 8px;
+  padding: 4px 9px;
   border: 0;
   border-radius: 4px;
   color: ghostwhite;
   box-shadow: 0 1px 5px #000000be;
+}
+
+.favorite {
+  background-color: #5f0294;
+  display: block;
+  margin-top: auto;
+  margin-right: auto;
+  font-size: 12px;
+  padding: 3px 6px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px #000000be;
+}
+
+.close:hover, .favorite:hover {
+  transition: 0.2s;
+  transform: translateY(-2px);
+}
+
+.favorite:active {
+  transition: 0.05s;
+  font-size: 16px;
+  padding: 0 3px;
 }

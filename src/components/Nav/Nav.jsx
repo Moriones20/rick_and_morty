@@ -18,6 +18,12 @@ const Nav = ({ logout }) => {
         </NavLink>
       )}
 
+      {location.pathname !== "/favorites" && (
+        <NavLink to={"/favorites"}>
+          <button className="navButton">Favorites</button>
+        </NavLink>
+      )}
+
       <NavLink to={"/"}>
         <button logout={logout} className="navButton">
           Logout

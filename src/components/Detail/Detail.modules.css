@@ -20,9 +20,7 @@
 }
 
 .img-detail img{
-  width: 300px;
-  height: 300px;
   border: none;
-  border-radius: 150px;
+  border-radius: 100%;
   box-shadow: 0 10px 20px #000000be;
 }

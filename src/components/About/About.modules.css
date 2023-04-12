@@ -1,9 +1,10 @@
 .about{
-    background-color: rgba(0, 48, 71, 0.6);
-    margin: 0 10%;
+    background-color: #3A015C;
+    margin: 4% 15%;
     text-align: center;
-    padding: 5px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 10px;
     color: whitesmoke;
     line-height: 0.8;
+    box-shadow: 0 8px 16px black;
 }

@@ -22,6 +22,7 @@ export default function SearchBar({ onSearch }) {
         className="search"
         onChange={handleChange}
         value={id}
+        placeholder="Ingrese un id..."
       />
       <div className="btn">
         <button

@@ -29,10 +29,10 @@ const Detail = () => {
     <div className="container-detail">
       <div className="text-detail">
         <h1>{character?.name}</h1>
-        <h2>{character?.status}</h2>
-        <h2>{character?.species}</h2>
-        <h2>{character?.gender}</h2>
-        <h2>{character?.origin?.name}</h2>
+        <h2>Status: {character?.status}</h2>
+        <h2>Specie: {character?.species}</h2>
+        <h2>Gender: {character?.gender}</h2>
+        <h2>Origin: {character?.origin?.name}</h2>
       </div>
       <div className="img-detail">
         <img clas src={character?.image} alt={character?.name} />

@@ -17,6 +17,7 @@
   padding: 20px 40px;
   box-shadow: 0 10px 25px #000000be;
   text-align: left;
+  margin-right: 20px;
 }
 
 .title {
@@ -102,4 +103,13 @@
 .danger {
   font-size: 12px;
   color: red;
+}
+
+/* En desarrollo */
+.dev {
+  background-color: #190029;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 7px 20px #000000be;
+  text-align: left;
 }

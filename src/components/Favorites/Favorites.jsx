@@ -7,6 +7,7 @@ import { useState } from "react";
 const Favorites = ({ myFavorites }) => {
   const dispatch = useDispatch();
 
+  // eslint-disable-next-line no-unused-vars
   const [aux, setAux] = useState(false);
 
   const handleOrder = (event) => {

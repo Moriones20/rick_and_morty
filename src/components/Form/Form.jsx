@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Validation from "../Validation.js";
 import "./Form.modules.css";
+import image from "../../assets/login.png"
 
 const Form = ({ login }) => {
   const [userData, setUserData] = useState({
@@ -34,7 +35,7 @@ const Form = ({ login }) => {
       <form className="form" onSubmit={handleSubmit}>
         <div className="top-form">
           <h1 className="title">Sign in</h1>
-          <img src="./login.png" alt="rick_and_morty" />
+          <img src={image} alt="rick_and_morty" />
         </div>
         <div className="inputContainer">
           <input
@@ -72,6 +73,12 @@ const Form = ({ login }) => {
           Submit
         </button>
       </form>
+      {/* En desarrollo */}
+      <div className="dev">
+        <p>email: Aa@gmail.com</p>
+        <p>password: asd123</p>
+        <p>Para probar el App en desarrollo.</p>
+      </div>
     </div>
   );
 };

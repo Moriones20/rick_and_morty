@@ -12,8 +12,8 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
 const API_KEY = "da4ba5cd3490.59e6f604f33068f4df34";
 
-const EMAIL = "Felipe@gmail.com";
-const PASSWORD = "felipe0608";
+const EMAIL = "Aa@gmail.com";
+const PASSWORD = "asd123";
 
 function App() {
   const location = useLocation();

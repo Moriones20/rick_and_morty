@@ -1,0 +1,37 @@
+.card-fav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.filter-order select {
+  background-color: #190029;
+  color: ghostwhite;
+  margin: 0 8px;
+  display: inline-block;
+  width: 15%;
+  cursor: pointer;
+  padding: 7px 10px;
+  height: 42px;
+  outline: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 5px 10px #000000be;
+  font-size: 14px;
+  border: 0;
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.filter-order select:hover {
+  background: #3A015C;
+}

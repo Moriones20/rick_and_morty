@@ -73,6 +73,12 @@ const Form = ({ login }) => {
           Submit
         </button>
       </form>
+      {/* En desarrollo */}
+      <div className="dev">
+        <p>email: Aa@gmail.com</p>
+        <p>password: asd123</p>
+        <p>Para probar el App en desarrollo.</p>
+      </div>
     </div>
   );
 };

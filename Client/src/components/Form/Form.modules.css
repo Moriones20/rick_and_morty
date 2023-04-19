@@ -103,4 +103,16 @@
 .danger {
   font-size: 12px;
   color: red;
+<<<<<<< HEAD:Client/src/components/Form/Form.modules.css
+=======
+}
+
+/* En desarrollo */
+.dev {
+  background-color: #190029;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 7px 20px #000000be;
+  text-align: left;
+>>>>>>> origin/master:src/components/Form/Form.modules.css
 }

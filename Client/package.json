@@ -1,5 +1,6 @@
 {
   "name": "rick_and_morty",
+  "homepage": "https://github.com/Moriones20/rick_and_morty/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
+  
 }

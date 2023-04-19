@@ -11,7 +11,11 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 const URL_BASE = "http://localhost:3001/rickandmorty/character";
 
+<<<<<<< HEAD:Client/src/App.js
 const EMAIL = "Felipe@gmail.com";
+=======
+const EMAIL = "Aa@gmail.com";
+>>>>>>> origin/master:src/App.js
 const PASSWORD = "asd123";
 
 function App() {

@@ -34,7 +34,7 @@ const Detail = () => {
         <h2>Origin: {character?.origin?.name}</h2>
       </div>
       <div className="img-detail">
-        <img clas src={character?.image} alt={character?.name} />
+        <img src={character?.image} alt={character?.name} />
       </div>
     </div>
   );

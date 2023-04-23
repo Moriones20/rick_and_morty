@@ -23,13 +23,13 @@ const Favorites = ({ myFavorites }) => {
     <div className="container-favorites">
       <div className="filter-order">
         <select className="order" name="order" onChange={handleOrder}>
-          <option>Select an order</option>
+          <option value="">Select an order</option>
           <option value="A">Ascendent</option>
           <option value="D">Descendent</option>
         </select>
 
         <select className="filter" name="filter" onChange={handleFilter}>
-          <option>Select a gender</option>
+          <option value="">Select a gender</option>
           <option value="All">All</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>

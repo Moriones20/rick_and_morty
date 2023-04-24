@@ -47,10 +47,12 @@ function Card({
       </div>
       <div className="card-link">
         <NavLink to={`/detail/${id}`}>
-          <h2>{name}</h2>
-          <h3>Specie: {species}</h3>
-          <h3>Gender: {gender}</h3>
           <img src={image} alt="" />
+          <div className="info">
+            <h2>{name}</h2>
+            <h3>Specie: {species}</h3>
+            <h3>Gender: {gender}</h3>
+          </div>
         </NavLink>
       </div>
     </div>

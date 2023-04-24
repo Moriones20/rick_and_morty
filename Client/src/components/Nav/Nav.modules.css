@@ -1,6 +1,6 @@
 nav {
   display: flex;
-  background-color: #3A015C;
+  background-color: rgb(61, 252, 22);
   margin-bottom: 10px;
   padding: 15px 10%;
   justify-content: flex-end;
@@ -12,16 +12,18 @@ nav {
   background-color: transparent;
   border: none;
   border-radius: 6px;
-  color: ghostwhite;
+  color: #190029;
   font-size: 16px;
   font-weight: 600;
   margin-left: 5px;
-  transition: all 0.25s ease;
+  transition: 0.2s ease-out;
   padding: 6px 10px;
 }
 
 .navButton:hover {
-  transform: translateY(-2px);
-  background-color: rgb(20, 172, 0);
-  color: #370057;
+  transform: translateY(-3px) ;
+}
+
+.navButton:active {
+  transform: scale(0.8);
 }

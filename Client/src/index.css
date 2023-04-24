@@ -1,13 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
 
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: "lato", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #11001c;
-  box-sizing: border-box;
+  background-color: rgb(14, 12, 14);
 }
 
 code {

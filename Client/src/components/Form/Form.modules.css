@@ -3,104 +3,171 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: ghostwhite;
 }
 
-.top-form {
-  display: flex;
+.box {
+  position: relative;
+  background: rgb(24, 22, 24);
+  width: 420px;
+  height: 460px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 420px;
+  height: 460px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    rgb(61, 252, 22),
+    rgb(61, 252, 22)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 420px;
+  height: 460px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    rgb(61, 252, 22),
+    rgb(61, 252, 22)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .form {
-  background-color: #190029;
-  width: 400px;
+  position: absolute;
+  inset: 3px;
   border-radius: 8px;
-  padding: 20px 40px;
-  box-shadow: 0 10px 25px #000000be;
+  background-color: rgb(24, 22, 24);
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  margin-right: 20px;
 }
 
 .title {
-  font-size: 50px;
-  margin-bottom: 50px;
-}
-
-.form img {
-  display: block;
-  width: auto;
-  height: 100px;
-  margin-left: auto;
+  color: ghostwhite;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-align: center;
 }
 
 .inputContainer {
   position: relative;
-  height: 45px;
-  width: 90%;
-  margin-bottom: 17px;
+  width: 300px;
+  margin-top: 35px;
 }
 
-.input {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
+.inputContainer input {
+  position: relative;
   width: 100%;
-  border: 1px solid #000000;
-  border-radius: 7px;
-  font-size: 16px;
-  padding: 0 20px;
-  outline: none;
-}
-
-.warning {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
-  width: 100%;
-  border: 3px solid #9c0202;
-  border-radius: 7px;
-  font-size: 16px;
-  padding: 0 20px;
-  outline: none;
-  z-index: 1;
-}
-
-::placeholder {
-  color: transparent;
-}
-
-.label {
-  position: absolute;
-  top: -30px;
-  padding: 5px 5px;
-  background-color: transparent;
-  color: #a771ce;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.submit {
-  display: block;
-  margin-left: auto;
-  padding: 15px 30px;
+  padding: 20px 10px 10px;
+  background: transparent;
   border: none;
-  background-color: #490174;
-  color: ghostwhite;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
-  margin-top: 30px;
-  transition: 0.1s;
+  outline: none;
+  color: rgb(24, 22, 24);
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
 }
 
-.submit:hover {
-  transform: translateY(-2px);
-  background-color: rgb(20, 172, 0);
-  color: #190029;
+.inputContainer span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: ghostwhite;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.inputContainer input:valid ~ span,
+.inputContainer input:focus ~ span {
+  color: ghostwhite;
+  transform: translateX(-8px) translateY(-34px);
+  font-size: 0.8em;
+}
+
+.inputContainer i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 110%;
+  height: 2px;
+  background: rgb(61, 252, 22);
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputContainer input:valid ~ i,
+.inputContainer input:focus ~ i {
+  height: 44px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links a {
+  margin: 10px 0;
+  padding-top: 10px;
+  font-size: 0.8em;
+  color: ghostwhite;
+  transition: 0.3s;
+}
+
+.links a:hover{
+  color: rgb(61, 252, 22);
+}
+
+input[type="submit"] {
+  border: none;
+  outline: none;
+  background: rgb(61, 252, 22);
+  padding: 11px 25px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(136, 255, 112);
 }
 
 .danger {
+  margin-top: 8px;
   font-size: 12px;
   color: red;
 }

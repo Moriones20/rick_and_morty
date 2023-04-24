@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Validation from "../Validation.js";
 import "./Form.modules.css";
-import image from "../../assets/login.png"
 
 const Form = ({ login }) => {
   const [userData, setUserData] = useState({
@@ -32,47 +31,43 @@ const Form = ({ login }) => {
 
   return (
     <div className="container-form">
-      <form className="form" onSubmit={handleSubmit}>
-        <div className="top-form">
+      <div className="box">
+        <form className="form" onSubmit={handleSubmit}>
           <h1 className="title">Sign in</h1>
-          <img src={image} alt="rick_and_morty" />
-        </div>
-        <div className="inputContainer">
-          <input
-            type="text"
-            name="email"
-            value={userData.email}
-            className={errors.email ? "warning" : "input"}
-            onChange={handleChange}
-            placeholder=""
-          />
-          <label htmlFor="email" className="label">
-            Email
-          </label>
-        </div>
-        {errors.email && <p className="danger">{errors.email}</p>}
-        <br />
-        <br />
+          <div className="inputContainer">
+            <input
+              type="text"
+              name="email"
+              required="required"
+              value={userData.email}
+              onChange={handleChange}
+            />
+            <span>Email</span>
+            <i></i>
+          </div>
+          {errors.email && <p className="danger">{errors.email}</p>}
 
-        <div className="inputContainer">
-          <input
-            type="password"
-            name="password"
-            value={userData.password}
-            className={errors.password ? "warning" : "input"}
-            onChange={handleChange}
-            placeholder=""
-          />
-          <label htmlFor="password" className="label">
-            Password
-          </label>
-        </div>
-        {errors.password && <p className="danger">{errors.password}</p>}
+          <div className="inputContainer">
+            <input
+              type="password"
+              name="password"
+              required="required"
+              value={userData.password}
+              onChange={handleChange}
+            />
+            <span>Password</span>
+            <i></i>
+          </div>
+          {errors.password && <p className="danger">{errors.password}</p>}
 
-        <button type="submit" className="submit">
-          Submit
-        </button>
-      </form>
+          <div className="links">
+            <a href="/">Forgot Password</a>
+            <a href="/">Sing up</a>
+          </div>
+
+          <input type="submit" value="Login" />
+        </form>
+      </div>
     </div>
   );
 };

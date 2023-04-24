@@ -1,10 +1,9 @@
 .about{
-    background-color: #3A015C;
-    margin: 4% 15%;
+    background-color: rgb(24, 22, 24);
+    margin: 6% 15%;
     text-align: center;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 8px;
     color: whitesmoke;
-    line-height: 0.8;
-    box-shadow: 0 8px 16px black;
+    box-shadow: 8px 8px 16px black;
 }

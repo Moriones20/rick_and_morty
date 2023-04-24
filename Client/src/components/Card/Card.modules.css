@@ -1,68 +1,83 @@
 .card {
   position: relative;
-  background-color: #190029;
+  background-color: rgb(24, 22, 24);
   margin: 10px;
   text-align: center;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 10px 20px #000000be;
+  box-shadow: 10px 10px 10px #00000067;
   line-height: 0.8;
-  transition: all 0.25s ease;
-}
-
-a:link, a:visited, a:active {
-  text-decoration:none;
-  color: ghostwhite;
+  transition: 0.5s ease-out;
+  z-index: 1;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  background-color: rgb(20, 172, 0);
+  transform: translateY(-10px);
+  background-color: rgb(61, 252, 22);
+  z-index: 2;
+}
+
+.card-link a:link, a:visited, a:active {
+  line-height: 30px;
+  text-decoration:none;
+  color: #190029;
+}
+
+.info {
+  display: none;
+}
+
+.card:hover .info{
+  display: block;
+  height: 100%;
+  transition: 0.5s ease-out;
 }
 
 .card img {
+  position: relative;
   width: 230px;
   border-radius: 10px;
+  z-index: 3;
 }
 
 .btn-fav-close {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .close {
-  background-color: #5f0294;
+  background-color: rgb(134, 0, 0);
   display: block;
   margin-top: auto;
   margin-left: auto;
   font-size: 12px;
-  padding: 4px 9px;
+  padding: 5px 9px;
   border: 0;
+  margin-bottom: 3px;
   border-radius: 4px;
   color: ghostwhite;
   box-shadow: 0 1px 5px #000000be;
+  transition: 0.3s ease-out;
 }
 
 .favorite {
-  background-color: #5f0294;
+  background-color: transparent;
   display: block;
   margin-top: auto;
   margin-right: auto;
-  font-size: 12px;
-  padding: 3px 6px;
+  font-size: 20px;
   border: 0;
   border-radius: 4px;
-  box-shadow: 0 1px 5px #000000be;
+  transition: 0.3s ease-out;
 }
 
 .close:hover, .favorite:hover {
-  transition: all 0.1s ease;
-  transform: translateY(-2px);
+  transform: translateY(-3px) scale(1.1);
 }
 
 .favorite:active {
   transition: all 0.1s ease;
-  font-size: 16px;
-  padding: 0 3px;
+  transform: scale(1);
 }

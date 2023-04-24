@@ -2,25 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: aliceblue;
+  flex-wrap: wrap;
+  color: #190029;
   margin: 5% 0;
 }
 
 .text-detail {
-  background-color: #3A015C;
+  background-color: rgb(61, 252, 22);
   padding: 50px;
-  margin: 0 6%;
+  margin: 2% 6%;
   border: none;
   border-radius: 10px;
-  box-shadow: 0 10px 20px #000000be;
+  box-shadow: 10px 10px 20px #000000be;
 }
 
 .img-detail {
-  margin: 0 6%;
+  margin: 2% 6%;
 }
 
 .img-detail img{
   border: none;
   border-radius: 100%;
-  box-shadow: 0 10px 20px #000000be;
+  box-shadow: 10px 10px 20px #000000be;
 }

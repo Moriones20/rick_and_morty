@@ -4,7 +4,7 @@ const regexNumber = /\d/;
 const Validation = (userData) => {
   let errors = {};
 
-  if (!userData.email || !regexEmail.test(userData.email)) {
+  if (!regexEmail.test(userData.email)) {
     errors.email = "Ingresa un email valido.";
   }
   if (userData.email.length >= 35) {

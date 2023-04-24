@@ -17,13 +17,16 @@ export default function SearchBar({ onSearch }) {
 
   return (
     <div className="container-searchbar">
+      <div className="search">
       <input
         type="search"
-        className="search"
+        required="required"
         onChange={handleChange}
         value={id}
-        placeholder="Ingrese un id..."
       />
+      <span>Introduzca el id</span>
+      <i></i>
+      </div>
       <div className="btn">
         <button
           className="btn-agregar"

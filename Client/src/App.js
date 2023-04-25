@@ -16,27 +16,29 @@ function App() {
   const navigate = useNavigate();
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
-  
-  function login(userData) {
-    const { email, password } = userData;
-    const URL = 'http://localhost:3001/rickandmorty/login/';
-    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-       const { access } = data;
-       setAccess(data);
-       access && navigate('/home');
-    });
- }
-  
-  const onSearch = (id) => {
-    axios(`${URL_BASE}/${id}`)
-      .then((response) => response.data)
-      .then((data) => {
-        if (data.name) {
-          setCharacters((oldChars) => [...oldChars, data]);
-        } else {
-          window.alert("¡No hay personajes con este ID!");
-        }
-      });
+
+  const login = async (userData) => {
+    try {
+      const { email, password } = userData;
+      const URL = "http://localhost:3001/rickandmorty/login/";
+      const { data } = await axios(
+        URL + `?email=${email}&password=${password}`
+      );
+      const { access } = data;
+      setAccess(access);
+      access && navigate("/home");
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
+
+  const onSearch = async (id) => {
+    try {
+      const { data } = await axios(`${URL_BASE}/${id}`);
+      setCharacters((oldChars) => [...oldChars, data]);
+    } catch (error) {
+      window.alert("¡No hay personajes con este ID!");
+    }
   };
 
   const onClose = (id) => {
@@ -45,7 +47,6 @@ function App() {
     );
     setCharacters(charactersFiltered);
   };
-
 
   useEffect(() => {
     !access && navigate("/");
@@ -57,18 +58,23 @@ function App() {
 
   return (
     <div className="App">
-      {location.pathname !== "/" && <Nav/>}
+      {location.pathname !== "/" && <Nav />}
       <Routes>
         <Route
           path="/home"
           element={
-            <Cards characters={characters} onClose={onClose} logout={logout} onSearch={onSearch}/>
+            <Cards
+              characters={characters}
+              onClose={onClose}
+              logout={logout}
+              onSearch={onSearch}
+            />
           }
         />
         <Route path="/about" element={<About />} />
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/" element={<Form login={login} />} />
-        <Route path="/favorites" element={<Favorites/>}/>
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </div>
   );

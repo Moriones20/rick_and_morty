@@ -110,7 +110,7 @@
 .inputContainer input:valid ~ span,
 .inputContainer input:focus ~ span {
   color: ghostwhite;
-  transform: translateX(-8px) translateY(-34px);
+  transform: translateX(-8px) translateY(-40px);
   font-size: 0.8em;
 }
 
@@ -127,9 +127,15 @@
   z-index: 9;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
 .inputContainer input:valid ~ i,
 .inputContainer input:focus ~ i {
-  height: 44px;
+  height: 50px;
+  background: rgb(188, 255, 174);
 }
 
 .links {
@@ -145,7 +151,7 @@
   transition: 0.3s;
 }
 
-.links a:hover{
+.links a:hover {
   color: rgb(61, 252, 22);
 }
 

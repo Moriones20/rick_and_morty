@@ -12,7 +12,7 @@
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
   background-color: rgb(61, 252, 22);
   z-index: 2;
 }
@@ -24,13 +24,13 @@
 }
 
 .info {
-  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .card:hover .info{
-  display: block;
   height: 100%;
-  transition: 0.5s ease-out;
 }
 
 .card img {

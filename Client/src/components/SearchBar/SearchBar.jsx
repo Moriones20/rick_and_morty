@@ -8,6 +8,13 @@ export default function SearchBar({ onSearch }) {
     setId(event.target.value);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13) {
+      onSearch(id);
+      setId("");
+    }
+  };
+
   const randomizer = () => {
     const randomId = (Math.floor(Math.random() * 826) + 1).toString();
     setId(randomId);
@@ -18,14 +25,15 @@ export default function SearchBar({ onSearch }) {
   return (
     <div className="container-searchbar">
       <div className="search">
-      <input
-        type="search"
-        required="required"
-        onChange={handleChange}
-        value={id}
-      />
-      <span>Introduzca el id</span>
-      <i></i>
+        <input
+          type="search"
+          required="required"
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+          value={id}
+        />
+        <span>Introduzca el id</span>
+        <i></i>
       </div>
       <div className="btn">
         <button

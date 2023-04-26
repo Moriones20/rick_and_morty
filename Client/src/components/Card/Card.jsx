@@ -36,7 +36,7 @@ function Card({
   }, [id, myFavorites]);
 
   return (
-    <div className="card">
+    <div className="container">
       <div className="btn-fav-close">
         <button className="favorite" onClick={handleFavorite}>
           {isFav ? "❤️" : "🤍"}
@@ -45,14 +45,14 @@ function Card({
           X
         </button>
       </div>
-      <div className="card-link">
+      <div className="card">
         <NavLink to={`/detail/${id}`}>
           <img src={image} alt="" />
-          <div className="info">
-            <h2>{name}</h2>
-            <h3>Specie: {species}</h3>
-            <h3>Gender: {gender}</h3>
-          </div>
+        </NavLink>
+      </div>
+      <div className="info">
+        <NavLink to={`/detail/${id}`}>
+          <h2>{name}</h2>
         </NavLink>
       </div>
     </div>

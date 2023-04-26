@@ -7,7 +7,7 @@
 
 .box {
   position: relative;
-  background: rgb(24, 22, 24);
+  background: rgb(24, 24, 24);
   width: 420px;
   height: 460px;
   border-radius: 8px;
@@ -24,8 +24,8 @@
   background: linear-gradient(
     0deg,
     transparent,
-    rgb(61, 252, 22),
-    rgb(61, 252, 22)
+    rgb(22, 244, 252),
+    rgb(252, 22, 194)
   );
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -41,8 +41,8 @@
   background: linear-gradient(
     0deg,
     transparent,
-    rgb(61, 252, 22),
-    rgb(61, 252, 22)
+    rgb(255, 67, 61),
+    rgb(0, 243, 252)
   );
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -60,9 +60,9 @@
 
 .form {
   position: absolute;
-  inset: 3px;
+  inset: 4px;
   border-radius: 8px;
-  background-color: rgb(24, 22, 24);
+  background-color: rgb(24, 24, 24);
   z-index: 10;
   padding: 50px 40px;
   display: flex;
@@ -92,7 +92,8 @@
   outline: none;
   color: rgb(24, 22, 24);
   font-size: 1em;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
+  font-weight: 600;
   z-index: 10;
 }
 
@@ -110,7 +111,7 @@
 .inputContainer input:valid ~ span,
 .inputContainer input:focus ~ span {
   color: ghostwhite;
-  transform: translateX(-8px) translateY(-40px);
+  transform: translateX(-8px) translateY(-32px);
   font-size: 0.8em;
 }
 
@@ -120,9 +121,13 @@
   bottom: 0;
   width: 110%;
   height: 2px;
-  background: rgb(61, 252, 22);
+  background: linear-gradient(
+    45deg,
+    rgb(255, 67, 61) 20%,
+    rgb(0, 255, 255) 100%
+  );
   border-radius: 4px;
-  transition: 0.5s;
+  transition: 0.5s ease-out;
   pointer-events: none;
   z-index: 9;
 }
@@ -134,8 +139,8 @@ input:-webkit-autofill:focus {
 
 .inputContainer input:valid ~ i,
 .inputContainer input:focus ~ i {
-  height: 50px;
-  background: rgb(188, 255, 174);
+  height: 40px;
+  background: ghostwhite;
 }
 
 .links {
@@ -152,24 +157,24 @@ input:-webkit-autofill:focus {
 }
 
 .links a:hover {
-  color: rgb(61, 252, 22);
+  color: rgb(0, 255, 255);
 }
 
 input[type="submit"] {
   border: none;
   outline: none;
-  background: rgb(61, 252, 22);
+  background: rgb(255, 67, 61);
   padding: 11px 25px;
   width: 100px;
   margin-top: 10px;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease-out;
+  transition: 0.5s ease-out;
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(136, 255, 112);
+  background-color: rgb(0, 255, 255);
 }
 
 .danger {

@@ -1,55 +1,69 @@
 .card {
+  height: 280px;
+  width: 280px;
   position: relative;
-  background-color: rgb(24, 22, 24);
-  margin: 10px;
-  text-align: center;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 10px 10px 10px #00000067;
-  line-height: 0.8;
-  transition: 0.5s ease-out;
-  z-index: 1;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  background-color: rgb(61, 252, 22);
+  margin: 10px 10px 0 10px;
+  box-shadow: 5px 5px 20px #000000;
+  transition: 0.3s ease-out;
   z-index: 2;
+  border-radius: 10px;
 }
 
-.card-link a:link, a:visited, a:active {
+.info a:link,
+a:visited,
+a:active {
   line-height: 30px;
-  text-decoration:none;
-  color: #190029;
-}
-
-.info {
-  height: 0;
-  overflow: hidden;
-  transition: 0.3s ease;
-}
-
-.card:hover .info{
-  height: 100%;
+  text-decoration: none;
+  color: ghostwhite;
 }
 
 .card img {
   position: relative;
-  width: 230px;
+  height: 280px;
   border-radius: 10px;
+}
+
+.info {
+  position: relative;
+  width: 280px;
+  background-color: rgb(20, 20, 20);
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  margin: 0 10px;
+  padding: 14px 10px;
   z-index: 3;
+  translate: 0 -10px;
+  box-shadow: 5px 5px 20px #000000;
+  transition: 0.3s ease-out;
+}
+
+.card:hover,
+.card:hover + .info, 
+.card:hover + .info a:link,
+.card:hover + .info a:active,
+.card:hover + .info a:visited {
+  transform: translateY(-8px);
+  transition: 0.3s ease-out;
+  transition: transform 0.3s ease-out, background 0.3s ease-out, box-shadow 0.5s ease-out;
+  background-color: rgb(0, 243, 252);
+  color: black;
+  box-shadow: 0 0 15px rgb(255, 67, 61);
 }
 
 .btn-fav-close {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin: 10px 20px;
+  z-index: 3;
+  translate: 0 48px;
 }
 
 .close {
   background-color: rgb(134, 0, 0);
   display: block;
+  position: relative;
   margin-top: auto;
   margin-left: auto;
   font-size: 12px;
@@ -73,7 +87,8 @@
   transition: 0.3s ease-out;
 }
 
-.close:hover, .favorite:hover {
+.close:hover,
+.favorite:hover {
   transform: translateY(-3px) scale(1.1);
 }
 

@@ -3,12 +3,12 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  color: #190029;
+  color: ghostwhite;
   margin: 5% 0;
 }
 
 .text-detail {
-  background-color: rgb(61, 252, 22);
+  background-color: rgb(20, 20, 20);
   padding: 50px;
   margin: 2% 6%;
   border: none;

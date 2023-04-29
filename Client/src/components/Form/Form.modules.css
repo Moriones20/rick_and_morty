@@ -24,8 +24,8 @@
   background: linear-gradient(
     0deg,
     transparent,
-    rgb(22, 244, 252),
-    rgb(252, 22, 194)
+    rgb(204, 0, 232),
+    rgb(204, 0, 232)
   );
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -41,8 +41,8 @@
   background: linear-gradient(
     0deg,
     transparent,
-    rgb(255, 67, 61),
-    rgb(0, 243, 252)
+    rgb(33, 255, 0),
+    rgb(33, 255, 0)
   );
   transform-origin: bottom right;
   animation: animate 6s linear infinite;
@@ -123,8 +123,8 @@
   height: 2px;
   background: linear-gradient(
     45deg,
-    rgb(255, 67, 61) 20%,
-    rgb(0, 255, 255) 100%
+    rgb(204, 0, 232) 20%,
+    rgb(33, 255, 0) 100%
   );
   border-radius: 4px;
   transition: 0.5s ease-out;
@@ -163,18 +163,19 @@ input:-webkit-autofill:focus {
 input[type="submit"] {
   border: none;
   outline: none;
-  background: rgb(255, 67, 61);
+  background: rgba(205, 0, 232, 0.65);
   padding: 11px 25px;
   width: 100px;
   margin-top: 10px;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.5s ease-out;
+  transition: all 0.3s;
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(0, 255, 255);
+  transform: translateY(-3px);
+  background: rgb(33, 255, 0, 0.65);
 }
 
 .danger {

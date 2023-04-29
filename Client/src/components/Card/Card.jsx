@@ -37,23 +37,33 @@ function Card({
 
   return (
     <div className="container">
-      <div className="btn-fav-close">
-        <button className="favorite" onClick={handleFavorite}>
-          {isFav ? "❤️" : "🤍"}
-        </button>
-        <button className="close" onClick={() => onClose(id)}>
-          X
-        </button>
-      </div>
       <div className="card">
-        <NavLink to={`/detail/${id}`}>
-          <img src={image} alt="" />
-        </NavLink>
-      </div>
-      <div className="info">
-        <NavLink to={`/detail/${id}`}>
-          <h2>{name}</h2>
-        </NavLink>
+        <div className="content">
+          <div className="front">
+            <img src={image} alt={name} />
+          </div>
+          <div className="back">
+            <div className="box-color">
+              <div className="box-plain">
+              <div className="btn-fav-close">
+                <button className="favorite" onClick={handleFavorite}>
+                  {isFav ? "❤️" : "🤍"}
+                </button>
+                <button className="close" onClick={() => onClose(id)}>
+                  X
+                </button>
+              </div>
+              <div className="text-link">
+                <NavLink to={`/detail/${id}`}>
+                  <h2>{name}</h2>
+                  <h3>{species}</h3>
+                  <h3>{gender}</h3>
+                </NavLink>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

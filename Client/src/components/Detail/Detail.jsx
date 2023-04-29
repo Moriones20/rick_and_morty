@@ -22,8 +22,6 @@ const Detail = () => {
     return setCharacter({});
   }, [id]);
 
-  console.log();
-
   return (
     <div className="container-detail">
       <div className="text-detail">

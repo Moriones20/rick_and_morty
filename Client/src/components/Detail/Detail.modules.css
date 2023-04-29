@@ -3,17 +3,19 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  background: linear-gradient(to right, rgb(14, 14, 14), rgb(20, 20, 20), rgb(14, 14, 14));
   color: ghostwhite;
   margin: 5% 0;
+  box-shadow: 10px 14px 20px #000000be;
 }
 
 .text-detail {
-  background-color: rgb(20, 20, 20);
   padding: 50px;
   margin: 2% 6%;
   border: none;
   border-radius: 10px;
-  box-shadow: 10px 10px 20px #000000be;
+  line-height: 46px;
+  text-shadow: 8px 10px 14px black;
 }
 
 .img-detail {

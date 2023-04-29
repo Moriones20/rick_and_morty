@@ -34,9 +34,11 @@
 }
 
 .order:hover {
-  background-color: rgb(170, 20, 0);
+  background-color: rgba(205, 0, 232, 0.6);
+  color: black;
 }
 
 .filter:hover {
-  background-color: rgb(0, 129, 129);
+  background-color: rgb(33, 255, 0, 0.6);
+  color: black;
 }

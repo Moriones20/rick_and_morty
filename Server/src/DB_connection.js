@@ -1,6 +1,8 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
+const FavoriteModel = require("./models/Favorite");
+const UserModel = require("./models/User");
 
 // EJERCICIO 03
 // A la instancia de Sequelize le falta la URL de conexión. ¡Agrégala!
@@ -14,8 +16,6 @@ const sequelize = new Sequelize(
 // EJERCICIO 05
 // Debajo de este comentario puedes ejecutar la función de los modelos.
 
-const FavoriteModel = require("./models/Favorite");
-const UserModel = require("./models/User");
 
 FavoriteModel(sequelize);
 UserModel(sequelize);

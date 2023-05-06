@@ -1,9 +1,10 @@
-const URL = "https://rickandmortyapi.com/api/character/";
+require("dotenv").config();
+const { API_URL } = process.env;
 const axios = require("axios");
 
 const getCharById = async (req, res) => {
   try {
-    const { data } = await axios(`${URL}/${req.params.id}`);
+    const { data } = await axios(`${API_URL}/${req.params.id}`);
     if (!data.name) throw new Error(`ID: ${req.params.id} Not found`);
 
     const character = {

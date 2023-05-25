@@ -1,3 +1,5 @@
-# Rick and Morty Project
+## Rick and Morty Project
 
-This project is based on React, in development.
+This App is designed to show the characters of the animated series Rick & Morty.
+
+It is designed with technologies like React, Node.js, redux, sequelize and postgreSQL.

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Detail.modules.css";
 
-const URL_BASE = "http://localhost:3001/rickandmorty/character";
+const URL_BASE = "/rickandmorty/character";
 
 const Detail = () => {
   const { id } = useParams();

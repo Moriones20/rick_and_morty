@@ -8,8 +8,9 @@ import Favorites from "./components/Favorites/Favorites";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+axios.defaults.baseURL = "http://localhost:3001";
 
-const URL_BASE = "http://localhost:3001/rickandmorty/character";
+const URL_BASE = "/rickandmorty/character";
 
 function App() {
   const location = useLocation();
@@ -20,7 +21,7 @@ function App() {
   const login = async (userData) => {
     try {
       const { email, password } = userData;
-      const URL = "http://localhost:3001/rickandmorty/login/";
+      const URL = "/rickandmorty/login/";
       const { data } = await axios(
         URL + `?email=${email}&password=${password}`
       );

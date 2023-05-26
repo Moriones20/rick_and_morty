@@ -45,7 +45,7 @@ const Form = ({ login }) => {
             <span>Email</span>
             <i></i>
           </div>
-          <p className="text-help">Usa Felipe@gmail.com</p>
+          <p className="text-help">Usa Aa@gmail.com</p>
           {errors.email && <p className="danger">{errors.email}</p>}
 
           <div className="inputContainer">

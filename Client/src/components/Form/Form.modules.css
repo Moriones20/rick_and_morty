@@ -183,3 +183,8 @@ input[type="submit"]:hover {
   font-size: 12px;
   color: red;
 }
+
+.text-help {
+  color: ghostwhite;
+  font-size: 12px;
+}

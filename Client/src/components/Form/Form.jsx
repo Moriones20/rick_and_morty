@@ -45,6 +45,7 @@ const Form = ({ login }) => {
             <span>Email</span>
             <i></i>
           </div>
+          <p className="text-help">Usa Felipe@gmail.com</p>
           {errors.email && <p className="danger">{errors.email}</p>}
 
           <div className="inputContainer">
@@ -58,6 +59,7 @@ const Form = ({ login }) => {
             <span>Password</span>
             <i></i>
           </div>
+          <p className="text-help">Usa asd123</p>
           {errors.password && <p className="danger">{errors.password}</p>}
 
           <div className="links">

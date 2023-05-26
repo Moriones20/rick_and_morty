@@ -8,7 +8,7 @@ import Favorites from "./components/Favorites/Favorites";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
-axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://rickandmorty-production-5fa3.up.railway.app/";
 
 const URL_BASE = "/rickandmorty/character";
 

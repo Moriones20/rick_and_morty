@@ -1,5 +1,5 @@
 const server = require("./app");
-const PORT = 3001;
+const { PORT } = process.env;
 const { conn } = require("./DB_connection");
 
 server.listen(PORT, async () => {
